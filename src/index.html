@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>答题辅助器</title>
+    <style>
+        label{
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin: 40px 0;text-align:center;">
+        <input type="button" value="抓题" id="run-btn" />
+        <input type="button" value="配置" id="setting-btn" />
+    </div>
+    <div style="width: 720px;margin: 0 auto;" id="setting-window">
+        <p>
+            <label>腾讯AI appId</label><input type="text" id="app_id"/>
+        </p>
+        <p>
+            <label>腾讯AI appkey</label><input type="text" id="app_key"/>
+        </p>
+        <p>
+            <label>窗口名称</label><input type="text" placeholder="模拟器/投影窗口名称" id="window_name"/>
+            <p><label>当前捕获到的窗口们</label><span id="window_names"></span></p>
+        </p>
+        <p>
+            <input type="button" value="测试抓屏" id="btn_test"/>
+        </p>
+        <p>
+            <input type="button" value="选择题目区域" id="q-btn"/>
+            <span id="question_area"></span>
+        </p>
+        <p>
+            <input type="button" value="选择答案区域" id="a-btn"/>
+            <span id="answer_area"></span>
+        </p>
+        <canvas id="preview_canvas"></canvas>
+    </div>
+    <iframe id="iframe" style="width: 100%;border: none;height: 600px;" src="https://www.baidu.com"></iframe>
+    <script src="./index.js"></script>
+</body>
+</html>
